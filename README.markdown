@@ -33,4 +33,6 @@ Furthermore you can choose your own mapping in the following way:
     let g:jquery_doc_mapping='kk'
 
 License
+-------
+
 Copyright (c) Luca Pette. Distributed under the same terms as Vim itself. See `:help license`.
