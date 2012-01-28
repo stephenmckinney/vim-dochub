@@ -15,7 +15,7 @@ Or you can unzip it in your `~/.vim` directory.
 How to use it
 -------------
 
-When your cursor is on a jQuery method, type `jj` (or your own mapping, see
+When your cursor is on a jQuery method, type `JJ` (or your own mapping, see
 settings for that) and the plugin will open a new tab in your browser (or a
 new instance of the browser) to the related docs. That's all.
 
@@ -30,7 +30,7 @@ vimrc:
 
 Furthermore you can choose your own mapping in the following way:
 
-    let g:jquery_doc_mapping='kk'
+    let g:jquery_doc_mapping='KK'
 
 License
 -------
