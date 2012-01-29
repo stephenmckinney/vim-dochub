@@ -4,7 +4,6 @@
 |jquery-doc-configuration|      Configuration
 |jquery-doc-copyright|          Copyright
 
-
 Introduction *jquery-doc-introduction*
 
 When your cursor is on a jQuery method, type `JJ` (or your mapping, see
@@ -22,3 +21,8 @@ vimrc:
 Furthermore you can choose your own mapping in the following way:
 
     let g:jquery_doc_mapping='PP'
+
+Copyright *vim-jquery-doc*
+
+Copyright (c) Luca Pette. Distributed under the same terms as Vim itself.
+See |license|.
