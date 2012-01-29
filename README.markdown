@@ -1,6 +1,8 @@
 vim-jquery-doc is a little plugin that helps you to look up jQuery API doc
 [website](http://api.jquery.com/) more quickly.
 
+If you want something similar for Ruby/Rspec/Rails see
+[vim-ruby-doc](http://github.com/lucapette/vim-ruby-doc).
 
 Installation
 ------------
