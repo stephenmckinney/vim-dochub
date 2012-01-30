@@ -1,4 +1,4 @@
-" jquery-doc.vim - Browse jquery API doc
+" jquery-doc.vim - Browse jQuery API doc
 " Author:       Luca Pette <lucapette@gmail.com>
 " Version:      0.1
 
@@ -8,7 +8,7 @@ endif
 let g:loaded_jquery_doc = 1
 
 if !exists('g:jquery_doc_command')
-    let g:jquery_doc_command='sensible-browser'
+    let g:jquery_doc_command='xdg-open'
 endif
 
 if !exists('g:jquery_doc_mapping')
