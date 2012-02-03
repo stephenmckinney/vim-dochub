@@ -48,7 +48,7 @@ Know Issues
 
 At this very moment, the plugins works only with GUI versions of Vim. I've
 planned to fix that. Actually, there is a specific
-[branch](https://github/lucapette/vim-ruby-doc/tree/terminal-issue) in
+[branch](https://github.com/lucapette/vim-ruby-doc/tree/terminal-issue) in
 [vim-ruby-doc](https://github.com/lucapette/vim-ruby-doc) and if you want to
 help I suggest you to take a look at mentioned branch because both projects
 have a very similar codebase. If you run into other issues, please open one
