@@ -16,3 +16,5 @@ if !exists('g:jquery_doc_mapping')
 endif
 
 execute "noremap <silent> ".g:jquery_doc_mapping." :call jquerydoc#search(expand('<cword>'))<CR>"
+
+command! -narg=1 JQueryDoc call jquerydoc#search(<q-args>)

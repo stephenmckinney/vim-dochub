@@ -1,28 +1,37 @@
 *jquery-doc.txt*   jquery-doc plugin documentation
 
-|jquery-doc-introduction|       Introduction
-|jquery-doc-configuration|      Configuration
-|jquery-doc-copyright|          Copyright
+1. Introduction                                   |jquery-doc-introduction|
+2. Confiuguration                                 |jquery-doc-configuration|
+3. Copyright                                      |jquery-doc-copyright|
+==========================================================================
 
-Introduction *jquery-doc-introduction*
+1. Introduction                                   *jquery-doc-introduction*
 
 When your cursor is on a jQuery method, type `JJ` (or your mapping, see
 settings for that) and the plugin will open a new tab in your browser (or a
 new instance of the browser) to the related docs. That's all.
 
-Configuration *jquery-doc-configuration* *g:jquery_doc_command* *g:jquery_doc_mapping*
+2. Configuration                                  *jquery-doc-configuration*
 
 By default, the plugin uses the xdg-open command to look up the docs but you
 can easily change the command. For example, if you are OSX you would like to
 change it to:
+                                                   *jquery_doc_command*  >
 
     let g:jquery_doc_command='open'
 
 Furthermore you can choose your own mapping in the following way:
+                                                   *jquery_doc_mapping*  >
 
     let g:jquery_doc_mapping='PP'
 
-Copyright *vim-jquery-doc*
+The plugin adds a command-line too:
+                                                   *:JQueryDoc*        >
+    :JQueryDoc each
+
+3. Copyright                                       *jquery-doc-copyright*
 
 Copyright (c) Luca Pette. Distributed under the same terms as Vim itself.
 See |license|.
+
+ vim:tw=78:ts=8:ft=help:norl:

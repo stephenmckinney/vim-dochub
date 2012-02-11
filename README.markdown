@@ -35,24 +35,10 @@ Furthermore you can choose your own mapping in the following way:
 
     let g:jquery_doc_mapping='KK'
 
-Roadmap
--------
+Furthermore, the plugin defines the following command to search on the
+command-line:
 
-The only feature I've already planned to add is commands for searching
-arbitrary stuff. Something like `:JqueryDoc foo` for example. I'd like to add
-support for Windows but I'm not going to do it. So pull-requests are more than
-welcome. If you have suggestion, I'll be glad to hear it from you.
-
-Know Issues
------------
-
-At this very moment, the plugins works only with GUI versions of Vim. I've
-planned to fix that. Actually, there is a specific
-[branch](https://github.com/lucapette/vim-ruby-doc/tree/terminal-issue) in
-[vim-ruby-doc](https://github.com/lucapette/vim-ruby-doc) and if you want to
-help I suggest you to take a look at mentioned branch because both projects
-have a very similar codebase. If you run into other issues, please open one
-here on github.
+- `JQueryDoc`
 
 License
 -------
