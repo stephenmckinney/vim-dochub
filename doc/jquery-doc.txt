@@ -1,4 +1,4 @@
-*jquery-doc.txt*   jquery-doc plugin documentation
+*jquery-doc.txt*   Browse jQuery API doc quickly
 
 1. Introduction                                   |jquery-doc-introduction|
 2. Confiuguration                                 |jquery-doc-configuration|
