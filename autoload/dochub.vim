@@ -6,12 +6,12 @@ function! s:execute(cmd)
     silent exe '!'.cmd.' 2>&1 > /dev/null'
     exec ':redraw!'
   else
-    silent exe '!'.cmd.' 2>&1 > /dev/null &'
+    exe '!'.cmd.' 2>&1 > /dev/null &'
   endif
   return v:shell_error
 endfunction
 
-function! jquerydoc#search(keyword)
-  let url = 'http://api.jquery.com/'.a:keyword
-  call s:execute(g:jquery_doc_command.' '.url)
+function! dochub#search(type, keyword)
+  let url = 'http://dochub.io/\\#'.a:type.'/'.a:keyword
+  call s:execute(g:dochub_command.' '.url)
 endfunction
