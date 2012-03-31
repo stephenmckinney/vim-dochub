@@ -1,46 +1,51 @@
-vim-jquery-doc is a little plugin that helps you to look up jQuery API doc
-[website](http://api.jquery.com/) more quickly.
+# dochub.vim
 
-If you want something similar for Ruby/Rspec/Rails see
-[vim-ruby-doc](http://github.com/lucapette/vim-ruby-doc).
+Quickly searches API Documentation from
+[DocHub.io](http://dochub.io) and 
+[RubyDoc.info](http://rubydoc.info)
+for the following supported `filetypes`:
 
-Installation
-------------
+* CSS
+* HTML
+* JavaScript
+* PHP
+* Python
+* Ruby
 
-I strongly recommend installing [pathogen.vim](https://github.com/tpope/pathogen.vim).
+
+## Installation
+
+To install using [pathogen.vim](https://github.com/tpope/pathogen.vim):
 
     cd ~/.vim/bundle
-    git clone git://github.com/lucapette/vim-jquery-doc.git
+    git clone git://github.com/poorlilrichgoy/vim-dochub.git
 
-Or you can unzip it in your `~/.vim` directory.
 
-How to use it
--------------
+## Usage
 
-When your cursor is on a jQuery method, type `JJ` (or your own mapping, see
-settings for that) and the plugin will open a new tab in your browser (or a
-new instance of the browser) to the related docs. That's all.
+dochub.vim is enabled by `filetype`. While editing a supported file,
+simply place the cursor over a class, property, or method and type `HH`.
+The plugin will then open a new tab in your browser (or a new instance of
+the browser) to the related docs. That's it.
 
-Configure it
-------------
 
-By default, the plugin uses the
+## Configuration
+
+By default, dochub.vim uses the `open` command for OS X or the
 [xdg-open](http://portland.freedesktop.org/xdg-utils-1.0/xdg-open.html)
-command to look up the docs but you can easily change the command. For
-example, if you are on OSX you would like to change it to:
+command for other OSes to look up the docs. You can easily change the command. 
+For example:
 
-    let g:jquery_doc_command='open'
+    let g:dochub_command='gnome-open'
 
 Furthermore you can choose your own mapping in the following way:
 
-    let g:jquery_doc_mapping='KK'
+    let g:dochub_mapping='<C-h>'
 
-Furthermore, the plugin defines the following command to search on the
-command-line:
+## Thanks
 
-- `JQueryDoc`
+This plugin started as a fork of [vim-jquery-doc](http://github.com/lucapette/vim-jquery-doc) and was further inspired by [vim-ruby-doc](http://github.com/lucapette/vim-ruby-doc).
 
-License
--------
+## License
 
-Copyright (c) Luca Pette. Distributed under the same terms as Vim itself. See `:help license`.
+Copyright (c) Steve McKinney. Distributed under the same terms as Vim itself. See `:help license`.

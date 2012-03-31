@@ -1,37 +1,44 @@
-*jquery-doc.txt*   Browse jQuery API doc quickly
+dochub.txt   Search API documentation quickly
 
-1. Introduction                                   |jquery-doc-introduction|
-2. Confiuguration                                 |jquery-doc-configuration|
-3. Copyright                                      |jquery-doc-copyright|
+Author:  Steve McKinney
+License: Same terms as Vim itself (see |license|)
+
+1. Introduction                                   |dochub|
+2. Confiuguration                                 |dochub-configuration|
+3. Copyright                                      |dochub-copyright|
 ==========================================================================
 
-1. Introduction                                   *jquery-doc-introduction*
+1. Introduction                                   *dochub*
 
-When your cursor is on a jQuery method, type `JJ` (or your mapping, see
-settings for that) and the plugin will open a new tab in your browser (or a
-new instance of the browser) to the related docs. That's all.
+dochub.vim quickly opens API Documentation from DocHub.io 
+(http://dochub.io) and RubyDoc.info (http://rubydoc.info)
+for the following supported |filetypes|:
 
-2. Configuration                                  *jquery-doc-configuration*
+* CSS
+* HTML
+* JavaScript
+* PHP
+* Python
+* Ruby
 
-By default, the plugin uses the xdg-open command to look up the docs but you
-can easily change the command. For example, if you are OSX you would like to
-change it to:
-                                                   *jquery_doc_command*  >
+dochub.vim is enabled by 'filetype'. While editing a supported file,
+simply place the cursor over a class, property, or method and type `HH`.
+The plugin will then open a new tab in your browser (or a new instance of
+the browser) to the related docs. That's it.
 
-    let g:jquery_doc_command='open'
+2. Configuration                                  *dochub-configuration*
+
+By default, dochub.vim uses the 'open' command for OS X or the
+xdg-open <http://portland.freedesktop.org/xdg-utils-1.0/xdg-open.html>
+command for other OSes to look up the docs. You can easily change the command. 
+For exampe:
+                                                   *dochub_command*  >
+
+    let g:dochub_command='gnome-open'
 
 Furthermore you can choose your own mapping in the following way:
-                                                   *jquery_doc_mapping*  >
+                                                   *dochub_mapping*  >
 
-    let g:jquery_doc_mapping='PP'
-
-The plugin adds a command-line too:
-                                                   *:JQueryDoc*        >
-    :JQueryDoc each
-
-3. Copyright                                       *jquery-doc-copyright*
-
-Copyright (c) Luca Pette. Distributed under the same terms as Vim itself.
-See |license|.
+    let g:dochub_mapping='<C-h>'
 
  vim:tw=78:ts=8:ft=help:norl:
