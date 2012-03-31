@@ -15,8 +15,13 @@ endif
 let g:loaded_dochub = 1
 
 if !exists('g:dochub_command')
-    "
+  if has('mac')
     let g:dochub_command='open'
+  elseif has('macunix')
+    let g:dochub_command='open'
+  else
+    let g:dochub_command='xdg-open'
+  endif
 endif
 
 if !exists('g:dochub_mapping')
