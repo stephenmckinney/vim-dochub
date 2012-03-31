@@ -1,10 +1,6 @@
 " dochub.vim - Search API documentation quickly
 " Author:       Steve McKinney <stevemckinney@gmail.com>
 " Version:      0.1
-" TODO: How can we have multiple types of documentation for each filetype? 
-" mappings like RR=rails, RS=rspec, JD=dom, JJ=jquery, RD=rubydoc, PD=django
-" TODO: Add command to search documentation for arbitrary stuff
-" TODO: Add Django support, Python support that doesn't suck
 
 if exists("g:loaded_dochub")
   finish
