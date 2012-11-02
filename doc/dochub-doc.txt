@@ -10,21 +10,33 @@ License: Same terms as Vim itself (see |license|)
 
 1. Introduction                                   *dochub*
 
-dochub.vim quickly opens API Documentation from DocHub.io 
-(http://dochub.io) and RubyDoc.info (http://rubydoc.info)
-for the following supported |filetypes|:
+dochub.vim quickly opens API Documentation from DocHub.io (http://dochub.io) for:
 
 * CSS
-* HTML
+* DOM
+* HTML 
 * JavaScript
+* JQuery
 * PHP
 * Python
-* Ruby
 
 dochub.vim is enabled by 'filetype'. While editing a supported file,
-simply place the cursor over a class, property, or method and type `HH`.
+simply place the cursor over a class, property, or method and type `JJ`.
 The plugin will then open a new tab in your browser (or a new instance of
 the browser) to the related docs. That's it.
+
+Documentation       Vim Filetypes
+CSS                 css
+TML                 eruby, html, htmldjango
+JavaScript          javascript
+PHP                 php
+Python              python
+
+The wildcards are documentation for DOM and JQuery, since they aren't
+associated to a 'filetype' they have their own mapping:
+
+* `JD` for DOM Documentation
+* `JQ` for JQuery Documentation
 
 2. Configuration                                  *dochub-configuration*
 
