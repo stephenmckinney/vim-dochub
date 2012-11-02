@@ -18,18 +18,23 @@ if !exists('g:dochub_command')
 endif
 
 if !exists('g:dochub_mapping')
-    let g:dochub_mapping='HH'
+    let g:dochub_mapping='JJ'
+endif
+if !exists('g:dochub_dom_mapping')
+    let g:dochub_dom_mapping='JD'
+endif
+if !exists('g:dochub_jquery_mapping')
+    let g:dochub_jquery_mapping='JQ'
 endif
 
 let s:ft_to_doc_map = {
     \ 'css'        : ['css'],
-    \ 'erb'        : ['html', 'rails'],
+    \ 'eruby'      : ['html'],
     \ 'html'       : ['html'],
     \ 'htmldjango' : ['html'],
-    \ 'javascript' : ['javascript', 'jquery', 'dom'],
-    \ 'php'        : ['php', 'html'],
+    \ 'javascript' : ['javascript'],
+    \ 'php'        : ['php'],
     \ 'python'     : ['python'],
-    \ 'ruby'       : ['ruby', 'rails', 'rspec-core', 'rpec-expectations', 'rspec-mocks']
     \ }
 
 let s:doc_to_api_map = {
@@ -40,11 +45,6 @@ let s:doc_to_api_map = {
     \ 'jquery'             : 'dochub',
     \ 'php'                : 'dochub',
     \ 'python'             : 'dochub',
-    \ 'ruby'               : 'ruby',
-    \ 'rails'              : 'rubyonrails',
-    \ 'rspec-core'         : 'rubydoc',
-    \ 'rspec-expectations' : 'rubydoc',
-    \ 'rspec-mocks'        : 'rubydoc'
     \ }
 
 augroup dochubEnablers
@@ -74,25 +74,6 @@ function! s:Searchdochub(doc_type, keyword)
   call s:execute(g:dochub_command.' '.url)
 endfunction
 
-" Example: https://www.google.com/search?ie=UTF-8&q=map+site%3Awww.ruby-doc.org
-function! s:Searchruby(doc_type, keyword)
-  let url = '"https://www.google.com/search?ie=UTF-8&q='.a:keyword.'+site%3Awww.ruby-doc.org"'
-  call s:execute(g:dochub_command.' '.url)
-endfunction
-
-" Examples:
-" http://rubydoc.info/search/gems/rspec-mocks?q=should_receive
-function! s:Searchrubydoc(doc_type, keyword)
-  let url = '"http://rubydoc.info/search/gems/'.a:doc_type.'?q='.a:keyword.'"'
-  call s:execute(g:dochub_command.' '.url)
-endfunction
-
-" Example: http://api.rubyonrails.org/?q=has_many
-function! s:Searchrubyonrails(doc_type, keyword)
-  let url = '"http://api.rubyonrails.org/?q='.a:keyword.'"'
-  call s:execute(g:dochub_command.' '.url)
-endfunction
-
 " Function: s:SetUpForNewFiletype(filetype) function {{{2
 " This function is responsible for setting up buffer scoped variables for the
 " given filetype.
@@ -108,6 +89,8 @@ function s:SetUpForNewFiletype(filetype, forceReset)
       if has_key(s:doc_to_api_map, b:doc_type)
         let b:api= s:doc_to_api_map[b:doc_type]
         execute "noremap <silent> ".g:dochub_mapping." :call <SID>Search".b:api."('".b:doc_type."',expand('<cword>'))<CR>"
+        execute "noremap <silent> ".g:dochub_dom_mapping." :call <SID>Search".b:api."('dom',expand('<cword>'))<CR>"
+        execute "noremap <silent> ".g:dochub_jquery_mapping." :call <SID>Search".b:api."('jquery',expand('<cword>'))<CR>"
       endif
     endif
 endfunction
