@@ -1,6 +1,6 @@
 # dochub.vim
 
-Quickly searches API Documentation from [DocHub.io](http://dochub.io) for:
+Quickly searches documentation from [DocHub.io](http://dochub.io) for:
 
 * CSS
 * DOM

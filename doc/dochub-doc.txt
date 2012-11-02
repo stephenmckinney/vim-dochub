@@ -10,7 +10,7 @@ License: Same terms as Vim itself (see |license|)
 
 1. Introduction                                   *dochub*
 
-dochub.vim quickly opens API Documentation from DocHub.io (http://dochub.io) for:
+dochub.vim quickly opens documentation from DocHub.io (http://dochub.io) for:
 
 * CSS
 * DOM
