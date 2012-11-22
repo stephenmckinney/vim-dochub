@@ -67,6 +67,7 @@ Furthermore you can choose your own mapping in the following way:
 ## Other Documentation Plugins
 
 * Ruby - [vim-ruby-doc](https://github.com/lucapette/vim-ruby-doc)
+* Ruby - [ri.vim](https://github.com/danchoi/ri.vim)
 
 
 ## Credit
