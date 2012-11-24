@@ -36,7 +36,7 @@ the browser) to the related docs. That's it.
 
 | Documentation | Vim Filetypes           |
 | :------------ | :---------------------  |
-| CSS           | css                     |
+| CSS           | css, scss               |
 | HTML          | eruby, html, htmldjango |
 | JavaScript    | javascript              |
 | PHP           | php                     |

@@ -35,6 +35,7 @@ let s:ft_to_doc_map = {
     \ 'javascript' : ['javascript'],
     \ 'php'        : ['php'],
     \ 'python'     : ['python'],
+    \ 'scss'       : ['css'],
     \ }
 
 let s:doc_to_api_map = {
